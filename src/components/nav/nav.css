@@ -1,9 +1,43 @@
+/* Top Nav Container */
+.topNavContainer {
+  position: fixed;
+  top: 0;
+  left: 20%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 50px 30px 30px 30px;
+  border-bottom: 1px solid #ececec;
+}
+
+.searchBar input {
+  width: 400px;
+  padding: 10px 10px 10px 30px;
+  border: 1px solid #ececec;
+  outline: none;
+  border-radius: 10px;
+  color: #514c5d;
+  color: #7e7e7e;
+}
+
+.navItem img {
+  padding-left: 35px;
+  cursor: pointer;
+}
+
+/* End of top nav styling */
+
+/* sideBaar styling */
 .sidebarContainer {
   padding: 40px 40px;
-  width: 300px;
+  width: 20%;
   position: fixed;
   border-right: 1px solid #ececec;
   height: 100vh;
+  left: 0;
+  top: 0;
 }
 
 .sidebarContainer ul {
@@ -28,3 +62,5 @@
 .activeBar {
   color: #fbb30b !important;
 }
+
+/* end of sidebar styling */
