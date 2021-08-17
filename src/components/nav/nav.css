@@ -1,0 +1,30 @@
+.sidebarContainer {
+  padding: 40px 40px;
+  width: 300px;
+  position: fixed;
+  border-right: 1px solid #ececec;
+  height: 100vh;
+}
+
+.sidebarContainer ul {
+  padding-top: 40px;
+  padding-left: 0;
+}
+
+.sidebarContainer ul li {
+  list-style: none;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  color: #514c5d;
+  opacity: 0.6;
+  font-weight: 500;
+}
+
+.sidebarContainer img {
+  padding-right: 15px;
+}
+
+.activeBar {
+  color: #fbb30b !important;
+}
