@@ -1,9 +1,67 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+.gigContent {
+  position: relative;
+  left: 20%;
+  top: 150px;
+  width: 80%;
+  padding: 20px 0;
 }
 
-body {
-  background-color: #fbfbff !important;
+.gigBtn {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
 }
+
+.addGig {
+  background-color: #2f417e;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.tabCont {
+  padding: 40px 40px 0 40px;
+}
+
+.tabList {
+  border-bottom: 1px solid #ececec;
+  padding: 0 40px;
+  justify-content: center;
+}
+
+/* filter section styling */
+.filterSec {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.filterSec select {
+  border: none;
+}
+
+.filterInner {
+  border: 1px solid #eeeeee;
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  color: #bcbcbc;
+  font-size: 14px;
+}
+
+.filterInner option {
+  padding-left: 10px;
+}
+
+.filterActive {
+  border: 1px solid #e18700;
+  color: #e18700;
+}
+
+.filterInner span {
+  padding: 0 7px;
+}
+/* End of filter section styling */
