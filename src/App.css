@@ -62,6 +62,211 @@
 }
 
 .filterInner span {
-  padding: 0 7px;
+  padding: 0 15px;
+  cursor: pointer;
 }
 /* End of filter section styling */
+
+/* gig content styling */
+.gigContentHeader {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: auto;
+}
+
+.gigHead {
+  padding-bottom: 50px;
+  position: absolute;
+  top: -40px;
+}
+
+.gigContentInner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px #00000003;
+  color: #49484d;
+  font-size: 14px;
+  font-weight: 400;
+  /* align-items: center; */
+}
+
+.gigContentInner button {
+  background-color: #fcf4e6;
+  border: none;
+  padding: 5px 10px;
+  color: #fbb30b;
+  border-radius: 5px;
+}
+
+.gigContentInner p {
+  margin-bottom: 0 !important;
+}
+/* End of gig content styling */
+
+/* Basic data Styling */
+.basicDataCont {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.basicData {
+  border-bottom: none;
+  padding: 20px;
+}
+
+.basicDataInner {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 30px 50px #0000000d;
+}
+
+.basicData .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #e18700 !important;
+  border-bottom: none !important;
+  background-color: transparent !important;
+}
+
+.fa-dot-circle {
+  font-size: 10px;
+  color: transparent;
+  text-align: left;
+}
+
+.nav-link.active .fa-dot-circle {
+  color: #e18700;
+}
+
+.basicDataCont label {
+  display: block;
+  color: #565d74;
+}
+
+.basicDataCont input,
+.basicDataCont select {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+  outline: none;
+  margin-top: 10px;
+}
+
+.basicDataCont select {
+  width: 100%;
+}
+
+.dataTags {
+  color: #565d74;
+  padding: 20px 0;
+}
+
+.dataTags small span {
+  text-decoration: underline;
+  padding-right: 5px;
+}
+
+.dataBtn {
+  text-align: right;
+}
+
+.dataBtn button {
+  margin: 10px;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.dataBtnCol button {
+  background-color: #2f417e;
+  color: #fff;
+}
+.highlightOption {
+  background: #fbb30b !important;
+  color: #fff !important;
+}
+
+@media screen and (max-width: 1150px) {
+  .filterInner span {
+    padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .gigContent {
+    width: 90%;
+    left: 10%;
+  }
+
+  .gigBtn,
+  .filterSec,
+  .tabList {
+    max-width: 555px;
+    margin: auto;
+  }
+
+  .filterInner {
+    margin: 10px;
+  }
+
+  .filterSec {
+    flex-wrap: wrap;
+  }
+
+  .gigHide {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 612px) {
+  .nav-pills .nav-link {
+    font-size: 10px;
+  }
+
+  .filterInner {
+    font-size: 8px;
+    padding: 2px 10px;
+    margin: 4px;
+  }
+
+  .searchBar input {
+    font-size: 12px;
+    padding: 2px 10px 2px 30px;
+    width: 80%;
+  }
+
+  .searchBar .fa-search {
+    left: 12px;
+    top: 9px;
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .tabList {
+    padding: 0 25px;
+  }
+
+  .gigBtn,
+  .filterSec,
+  .tabList {
+    width: 100%;
+    left: 0;
+  }
+
+  .searchBar .fa-search {
+    left: 10px;
+    top: 16px;
+    font-size: 14px;
+  }
+}

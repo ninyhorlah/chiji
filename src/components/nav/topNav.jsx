@@ -8,6 +8,7 @@ const TopNav = () => {
     return ( 
         <div className='topNavContainer'>
             <div className='searchBar'>
+                <i class="fas fa-search"></i>
                 <input type="text" placeholder='Search'/>
             </div>
             <div className='navItem'>

@@ -5,6 +5,7 @@ import remote from '../asset/remote.png'
 import design from '../asset/design.png'
 import contract from '../asset/contract.png'
 import GigContent from './gigContent'
+import { Link } from 'react-router-dom'
 
 const InnerTab = () => {
     return ( 
@@ -12,7 +13,9 @@ const InnerTab = () => {
             <div className="gigBtn">
                 <h4>Gigs</h4>
 
-                <button className="addGig">New gig +</button>
+                <Link to='/basic-data'>
+                    <button className="addGig">New gig +</button>
+                </Link>
             </div>
 
             {/* tab header */}
