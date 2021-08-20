@@ -252,6 +252,13 @@
   }
 }
 
+@media screen and (max-width: 680px) {
+  .gigContent {
+    left: 0;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .tabList {
     padding: 0 25px;
