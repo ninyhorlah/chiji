@@ -169,6 +169,14 @@
   padding: 20px 0;
 }
 
+.data1 {
+  display: flex;
+}
+
+.data1_ {
+  margin: 0 0.5rem;
+}
+
 .dataTags small span {
   text-decoration: underline;
   padding-right: 5px;
@@ -275,5 +283,13 @@
     left: 10px;
     top: 16px;
     font-size: 14px;
+  }
+
+  .data1 {
+    display: block;
+  }
+
+  .data1_ {
+    margin: 0.5rem 0;
   }
 }

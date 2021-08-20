@@ -18,23 +18,23 @@ class BasicData extends Component {
                     <div className="tab-content" id="v-pills-tabContent">
                         <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                             <div className='basicDataCont'>
-                                <div className="data1 d-flex">
+                                <div className="data1 ">
                                      <div >
                                         <label htmlFor="">Role</label>
                                         <input type="text" placeholder='Product Designer'/>
                                     </div>
-                                    <div className='mx-2'>
+                                    <div className='data1_'>
                                         <label htmlFor="">Company</label>
                                         <input type="text" placeholder='TM30'/>
                                     </div>
                                 </div>
                                 <label className='pt-4' htmlFor="">Location</label>
-                                <div className='d-flex'>
+                                <div className='data1'>
                                     <select name="" id="">
                                         <option value="">Country</option>
                                         <option value="">State</option>
                                     </select>
-                                    <select name="" id="" className='mx-2'>
+                                    <select name="" id="" className='data1_'>
                                         <option value="">State/Region</option>
                                         <option value="">Origin</option>
                                     </select>
@@ -94,9 +94,7 @@ class BasicData extends Component {
                                 </div>
 
                                  <div className="dataBtn mt-4">
-                                    <Link to='/'>
-                                        <button>Back</button>
-                                    </Link>
+                                    <button>Back</button>
                                     <span className='dataBtnCol'><button >Add gig</button></span>
                                 </div>
                            </div>
