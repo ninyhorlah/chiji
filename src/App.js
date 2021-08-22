@@ -5,10 +5,12 @@ import TopNav from "./components/nav/topNav";
 import InnerTab from "./components/tab";
 import BasicData from "./components/basicData";
 import Renumeration from "./components/renumeration";
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   return (
-    <div className="App">
+    <Provider store={store}>
       <Router>
         <TopNav />
         <SideBar />
@@ -18,7 +20,7 @@ function App() {
           <Route path="/renumeration" component={Renumeration} />
         </Switch>
       </Router>
-    </div>
+    </Provider>
   );
 }
 

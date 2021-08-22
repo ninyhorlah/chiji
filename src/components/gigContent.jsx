@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { connect } from "react-redux";
 import sortIcon from '../asset/sortIcon.png'
+import { getUsers } from '../actions/users.action'
 
-const GigContent = () => {
+const GigContent = ({props}) => {
+    const[users, setUsers] = useState([])
+
+     fetchUsers = async() => {
+        const response = await props.dispatch(getUsers())
+        console.log(1111, response);
+     }
+
+     useEffect(() => {
+         fetchUsers()
+     }, [])
     return ( 
         <div className='allGigHide'>
 
@@ -41,4 +53,13 @@ const GigContent = () => {
      );
 }
  
-export default GigContent;
+// export default GigContent;
+mapStateToProps = (state) => ({
+    getUsers: state.userReducer.getUsers,
+});
+  
+mapDispatchToProps = (dispatch) => ({
+    dispatch
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(GigContent);
