@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from "react-redux";
-import sortIcon from '../asset/sortIcon.png'
 import { getUsers } from '../actions/users.action'
 
 const GigContent = ({dispatch}) => {
@@ -26,8 +25,8 @@ const GigContent = ({dispatch}) => {
                 <div></div>
                 <div><p>Name</p></div>
                 <div><p>Company</p></div>
-                <div className='gigHide'><p>City <span><img src={sortIcon} alt="" /></span></p></div>
-                <div className='gigHide'><p>Website <span><img src={sortIcon} alt="" /></span></p></div>
+                <div className='gigHide'><p>City </p></div>
+                <div className='gigHide'><p>Website </p></div>
                 <div></div>
                 
             </div>
