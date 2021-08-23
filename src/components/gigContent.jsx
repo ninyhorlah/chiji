@@ -6,15 +6,17 @@ import { getUsers } from '../actions/users.action'
 const GigContent = ({dispatch}) => {
     const[users, setUsers] = useState([])
 
-    const fetchUsers = async() => {
+
+     useEffect(() => {
+
+        const fetchUsers = async() => {
         const response = await dispatch(getUsers())
         
         setUsers(response.data)
      }
 
-     useEffect(() => {
          fetchUsers()
-     })
+     }, [dispatch])
     return ( 
         <div className='allGigHide'>
 
