@@ -3,7 +3,27 @@ import { Link } from 'react-router-dom';
 import Multiselect from 'multiselect-react-dropdown';
 
 class BasicData extends Component {
+    state = {
+        showBasicData: true,
+        showRenumeration: false
+    }
+
+    handleContinue = () => {
+            this.setState({
+                showRenumeration: true,
+                showBasicData: false
+            })
+        }
+
+        handleBack = () => {
+            this.setState({
+                showRenumeration: false,
+                showBasicData: true
+            })
+        }
     render(){
+        const { showRenumeration, showBasicData } = this.state
+        
         return(
         <div className='gigContent'>
             <div className="tabList"><h3>Gigs</h3></div>
@@ -11,12 +31,12 @@ class BasicData extends Component {
                 <h6>New gigs</h6>
                 <div class="d-flex align-items-start">
                     <div className="nav flex-column nav-pills me-3 basicDataInner" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <button className="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><i className="fas fa-dot-circle"></i> Basic Data</button>
-                        <button className="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i className="fas fa-dot-circle"></i> Renumeration</button>
+                        <button className={`nav-link ${showBasicData ? "active" : ""}`} id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"><i className="fas fa-dot-circle"></i> Basic Data</button>
+                        <button className={`nav-link ${showRenumeration ? "active" : ""}`} id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i className="fas fa-dot-circle"></i> Renumeration</button>
                         
                     </div>
                     <div className="tab-content" id="v-pills-tabContent">
-                        <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div className={`tab-pane fade ${showBasicData ? "show active" : ""}`} id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                             <div className='basicDataCont'>
                                 <div className="data1 ">
                                      <div >
@@ -81,11 +101,11 @@ class BasicData extends Component {
                                     <Link to='/'>
                                         <button>Cancel</button>
                                     </Link>
-                                    <span className='dataBtnCol'><button >Continue</button></span>
+                                    <span className='dataBtnCol'><button onClick={this.handleContinue}>Continue</button></span>
                                 </div>
                             </div>
                         </div>
-                        <div className="tab-pane fade " id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <div className={`tab-pane fade ${showRenumeration ? "show active" : ""}`} id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                            <div className="basicDataCont">
                                 <label htmlFor="">Salary</label>
                                 <div className=' d-flex'>
@@ -94,8 +114,10 @@ class BasicData extends Component {
                                 </div>
 
                                  <div className="dataBtn mt-4">
-                                    <button>Back</button>
-                                    <span className='dataBtnCol'><button >Add gig</button></span>
+                                    <button onClick={this.handleBack}>Back</button>
+                                    <Link to='/'>
+                                        <span className='dataBtnCol'><button >Add gig</button></span>
+                                    </Link>
                                 </div>
                            </div>
                         </div>
