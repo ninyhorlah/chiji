@@ -15,7 +15,9 @@ const SideBar = () => {
             </Link>
             <ul>
                 <li><img src={dashboard} alt="" title='Dashboard'/> <span>Dashboard</span></li>
-                <li className='activeBar'><img src={gigs} alt="" title='Gigs'/> <span>Gigs</span></li>
+                <Link to='/' className='text-decoration-none'>
+                    <li className='activeBar '><img src={gigs} alt="" title='Gigs'/> <span>Gigs</span></li>
+                </Link> 
                 <li><img src={company} alt="" title='Company'/> <span>Company</span></li>
                 <li><img src={account} alt="" title='Account'/> <span>Account</span></li>
             </ul>
