@@ -14,7 +14,7 @@ const GigContent = ({dispatch}) => {
 
      useEffect(() => {
          fetchUsers()
-     }, [])
+     })
     return ( 
         <div className='allGigHide'>
 
