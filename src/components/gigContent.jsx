@@ -3,12 +3,13 @@ import { connect } from "react-redux";
 import sortIcon from '../asset/sortIcon.png'
 import { getUsers } from '../actions/users.action'
 
-const GigContent = ({props}) => {
+const GigContent = ({dispatch}) => {
     const[users, setUsers] = useState([])
 
-     fetchUsers = async() => {
-        const response = await props.dispatch(getUsers())
-        console.log(1111, response);
+    const fetchUsers = async() => {
+        const response = await dispatch(getUsers())
+        
+        setUsers(response.data)
      }
 
      useEffect(() => {
@@ -17,48 +18,52 @@ const GigContent = ({props}) => {
     return ( 
         <div className='allGigHide'>
 
-            <div className='gigContentInner'>
+            {users && users.length > 0 ? 
+            <>
+            <div className="gigContentInner gigHead">
+                <div></div>
+                <div><p>Name</p></div>
+                <div><p>Company</p></div>
+                <div className='gigHide'><p>City <span><img src={sortIcon} alt="" /></span></p></div>
+                <div className='gigHide'><p>Website <span><img src={sortIcon} alt="" /></span></p></div>
+                <div></div>
+                
+            </div>
+             {users.map((user, index) => <div key={index} className='gigContentInner'>
                 <div>
                     <input type="checkbox" name="" id="" />
                 </div>
                 <div>
-                    <div className='gigHead'>
-                        <p>Role</p>
-                    </div>
-                    <p>Product Designer</p>
+                    
+                    <p>{user.name}</p>
                 </div>
                  <div>
-                     <div className='gigHead'>
-                        <p>Company</p>
-                    </div>
-                    <p>TM30</p>
+                    
+                    <p>{user.company.name}</p>
                 </div>
                 <div className='gigHide'>
-                    <div className='gigHead'>
-                        <p>Date <span><img src={sortIcon} alt="" /></span></p>
-                    </div>
-                    <p>20th, June 2020</p>
+                    
+                    <p>{user.address.city}</p>
                 </div>
                 <div className='gigHide'>
-                    <div className='gigHead'>
-                        <p>Salary($) <span><img src={sortIcon} alt="" /></span></p>
-                    </div>
-                    <p>20,000 - 30,000</p>
+                    
+                    <p>{user.website}</p>
                 </div>
                 <div>
                     <button>Delete</button>
                 </div>
-            </div>
+            </div>)}
+            </> : <></>}
         </div>
      );
 }
  
 // export default GigContent;
-mapStateToProps = (state) => ({
-    getUsers: state.userReducer.getUsers,
+const mapStateToProps = (state) => ({
+    state
 });
   
-mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch) => ({
     dispatch
 });
 
